@@ -1,21 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-
-import { PhotoService } from './sistema/photos/photo/photo.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  photos: Object[] = [];
-
-  constructor(private photoServive: PhotoService) {}
+export class AppComponent {
   
-  ngOnInit(): void {
-    this.photoServive
-    .listFromPhotos()
-    .subscribe(photos => this.photos = photos);
-  }
   
 }
