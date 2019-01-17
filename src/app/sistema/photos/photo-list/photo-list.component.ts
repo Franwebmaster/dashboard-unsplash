@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PhotoService } from '../photo/photo.service';
+import { Photo } from './../photo/photo';
 
 @Component({
   selector: 'app-photo-list',
@@ -9,7 +10,7 @@ import { PhotoService } from '../photo/photo.service';
 })
 export class PhotoListComponent implements OnInit {
 
-  photos: Object[] = [];
+  photos: Photo[] = [];
 
   constructor(private photoServive: PhotoService) {}
   
